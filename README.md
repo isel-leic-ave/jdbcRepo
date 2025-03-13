@@ -99,6 +99,16 @@ You may use the ad-hoc implementation of `ChannelRepositoryJdbc` in the
 Run the micro-benchmarking from `jdbcRepoMicrobench` and register the slowdown 
 of the `RepositoryReflect` implementation compared to the ad-hoc `ChannelRepositoryJdbc`.
 
+Below is an example of the expected slowdown, approximately 3×, in the
+`RepositoryReflect` implementation when retrieving all channels using an
+in-memory mock JDBC implementation with five `Channel` instances.
+
+```
+Benchmark                             Mode  Cnt     Score     Error  Units
+benchRepositoryJdbcGetAllChannels     avgt    4   938.291 ±  29.267  ns/op
+benchRepositoryReflectGetAllChannels  avgt    4  3143.358 ± 904.489  ns/op
+```
+
 **NOTE:** Before proceeding, ensure that the unit tests of `jdbcRepoMicrobench` pass without errors.
 
 To run the benchmark on you local machine just run:
