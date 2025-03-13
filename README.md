@@ -2,6 +2,14 @@
 
 Automatic implementation of a `Repository` interface for a given _domain object_.
 
+## Github Classrooms for submission (**groups of 3 students**):
+
+* i41d - https://classroom.github.com/a/rgXxQMNw
+* i42d - https://classroom.github.com/a/S81A4PRI
+* i43d - https://classroom.github.com/a/T4Dpgvhr
+* i44d - https://classroom.github.com/a/6Dl1CfG4
+* i41n - https://classroom.github.com/a/oALcsFpm
+
 ## Assignments
 
 **Deadlines**:
