@@ -68,6 +68,14 @@ direction LR
 Provide an implementation of the `RepositoryReflect` class in the `jdbcRepoLib`
 module using the **Kotlin Reflection API**.  
 
+The unit tests in the `jdbcRepoLib` module use a PostgreSQL database running in
+a Docker container. The Docker setup and database initialization scripts are
+located in the `/src/test/docker` and `/src/test/sql` directories, respectively.  
+The `test` task in `build.gradle` is configured to automatically start the
+Docker container before running the unit tests and stop it afterward.  
+To run the unit tests, you must install [Docker
+Desktop](https://www.docker.com/products/docker-desktop/).
+
 Your implementation should be developed incrementally, addressing the
 requirements of each of the following unit tests:  
 
