@@ -178,7 +178,7 @@ as `Channel`, `Message`, or others—specifically the
 `open fun mapRowToEntity(rs: ResultSet): T` method. To that end, **ENSURE** the following:
 1. The `RepositoryReflect` class is marked as `open`.
 2. The method `mapRowToEntity`, or its equivalent, is declared as `open`.
-3. The `connection` property is declared as `protected`.`
+3. The `connection` property is declared as `protected`.
 
 
 ### 2.0 - Configure the project for Java 22
@@ -214,20 +214,20 @@ Your implementation should be developed incrementally, fulfilling the requiremen
    clearly explaining its behavior and purpose.
 
 3. Implement the `buildRepositoryByteArray()` function:
-  1. This function generates a byte array representing a dynamically created
-     class that extends `RepositoryReflect`, and then saves it to the
-     corresponding class file.
-  2. Ensure that the `RepositoryReflect` class is marked as `open`.
-  3. The dynamically created class must have a constructor that matches the
-     base class constructor and calls the base constructor with the required
-     arguments.
-  4. **Do not override any methods** in this step.
-  5. In `UserRepositoryTest` add an instance of `Repository<Long, User>`,
-     created using `loadDynamicRepo(connection, User::class)`, to the
-     repositories returned by the `repositories()` function.
-  6. Verify that all tests pass and confirm that the `RepositoryDynUser.class`
-     file has been created. Open the resulting class file in IntelliJ and check
-     the decompiled code.
+   1. This function generates a byte array representing a dynamically created
+      class that extends `RepositoryReflect`, and then saves it to the
+      corresponding class file.
+   2. Ensure that the `RepositoryReflect` class is marked as `open`.
+   3. The dynamically created class must have a constructor that matches the
+      base class constructor and calls the base constructor with the required
+      arguments.
+   4. **Do not override any methods** in this step.
+   5. In `UserRepositoryTest` add an instance of `Repository<Long, User>`,
+      created using `loadDynamicRepo(connection, User::class)`, to the
+      repositories returned by the `repositories()` function.
+   6. Verify that all tests pass and confirm that the `RepositoryDynUser.class`
+      file has been created. Open the resulting class file in IntelliJ and check
+      the decompiled code.
 
 4. Override the `mapRowToEntity` method in the dynamically generated class, or
    any other method responsible for mapping a `ResultSet` into an instance of
