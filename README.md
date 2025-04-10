@@ -294,7 +294,7 @@ class that extends `RepositoryReflect` and implements the given interface, e.g.:
 ```kotlin
 val repo: UserRepository = loadDynamicRepo(connection, User::class, UserRepository::class)
 
-interface UserRepository : Repository<String, User> {
+interface UserRepository : Repository<Long, User> {
     @Insert
     fun insert(
         name: String,
