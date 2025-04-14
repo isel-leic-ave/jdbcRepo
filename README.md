@@ -185,10 +185,10 @@ as `Channel`, `Message`, or others—specifically the
 
 Update your `jdbcRepo` project to match the configurations introduced in
 [commit 3cb3b53](https://github.com/isel-leic-ave/jdbcRepo/commit/3cb3b534b50fad5168c5e1ca485828bbcc3cdc9b),
-ensuring support for Java 22 and the new Class-File API. This includes
-updating the following files:
+ensuring support for Java 22 and the new Class-File API.
+This includes updating the following files:
 * `gradle-wrapper.properties`
-* `build.gradle` in each module
+* `build.gradle` in each module (**IGNORE the modification of docker path**)
 
 **After making these changes, verify that the project still builds successfully
 by running `./gradlew build`.**
