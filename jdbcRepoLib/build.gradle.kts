@@ -53,7 +53,7 @@ val dockerComposePath = dockerDir.file("docker-compose.yml").toString()
 
 task<Exec>("dbTestsUp") {
     commandLine(
-        "/usr/local/bin/docker",
+        "docker",
         "compose",
         "-p",
         "jdbc-repo",
@@ -68,10 +68,10 @@ task<Exec>("dbTestsUp") {
 }
 
 task<Exec>("dbTestsWait") {
-    commandLine("/usr/local/bin/docker", "exec", "chat-db", "/app/bin/wait-for-postgres.sh", "localhost")
+    commandLine("docker", "exec", "chat-db", "/app/bin/wait-for-postgres.sh", "localhost")
     dependsOn("dbTestsUp")
 }
 
 task<Exec>("dbTestsDown") {
-    commandLine("/usr/local/bin/docker", "compose", "-p", "jdbc-repo", "-f", dockerComposePath, "down", "chat-db")
+    commandLine("docker", "compose", "-p", "jdbc-repo", "-f", dockerComposePath, "down", "chat-db")
 }
