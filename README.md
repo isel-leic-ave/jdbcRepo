@@ -13,9 +13,9 @@ Automatic implementation of a `Repository` interface for a given _domain object_
 ## Assignments
 
 **Deadlines**:
-* Part 1 - **April 7**
-* Part 2 - **May 5**
-* Part 3 - **May 26**
+* [Part 1](#assignment-1---jdbcrepolib-with-kotlin-reflection) - **April 7**
+* [Part 2](#assignment-2---dynamic-generation-of-bytecode) - **May 5**
+* [Part 3](#assignment-3) - **May 26**
 
 ## Scope
 
