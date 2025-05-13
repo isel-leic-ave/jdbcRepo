@@ -390,13 +390,8 @@ query-building logic is encapsulated in an auxiliary class named
 Note that `RepositoryReflect` should provide to the `QueryableBuilder` any
 information necessary to support this functionality, such as metadata or helper
 functions.
-
-**You must also implement unit tests to verify the correct behavior of
-`whereEquals` and `orderBy`, including their lazy evaluation semantics.**
-
-You should ensure that closeable resources, such as `PreparedStatement` and
-`ResultSet`, are automatically closed when iteration over the returned result
-reaches the end.
+In the following example, `properties` contains all the necessary information
+about the properties of the given entity `T`.
 
 ```kotlin
 open class RepositoryReflect<K : Any, T : Any>(
@@ -410,3 +405,10 @@ open class RepositoryReflect<K : Any, T : Any>(
     }
 }
 ```
+
+**You must also implement unit tests to verify the correct behavior of
+`whereEquals` and `orderBy`, including their lazy evaluation semantics.**
+
+You should ensure that closeable resources, such as `PreparedStatement` and
+`ResultSet`, are automatically closed when iteration over the returned result
+reaches the end.
