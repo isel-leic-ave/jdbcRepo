@@ -386,6 +386,10 @@ generated repositories as well.
 The method should be implemented following the approach below, where all
 query-building logic is encapsulated in an auxiliary class named
 `QueryableBuilder`, which you must implement as part of this assignment.
+The `QueryableBuilder` can implement the *iterator protocol* either by
+explicitly implementing the `Iterator` interface or by using the `sequence`
+generator function.
+You can **optionally** implement **both** approaches.
 
 Note that `RepositoryReflect` should provide to the `QueryableBuilder` any
 information necessary to support this functionality, such as metadata or helper
